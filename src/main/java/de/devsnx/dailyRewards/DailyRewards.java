@@ -1,19 +1,19 @@
 package de.devsnx.dailyRewards;
 
+import de.devsnx.dailyRewards.commands.CommandDaily;
 import de.devsnx.dailyRewards.manager.DailyRewardManager;
-import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class DailyRewards extends JavaPlugin {
 
     public static DailyRewards instance;
-    @Getter DailyRewardManager dailyRewardManager;
+    public DailyRewardManager dailyRewardManager;
 
     @Override
     public void onEnable() {
         instance = this;
         dailyRewardManager = new DailyRewardManager();
-        getCommand("daily").setExecutor(new DailyRewards());
+        getCommand("daily").setExecutor(new CommandDaily());
     }
 
     @Override
@@ -23,5 +23,9 @@ public final class DailyRewards extends JavaPlugin {
 
     public static DailyRewards getInstance() {
         return instance;
+    }
+
+    public DailyRewardManager getDailyRewardManager() {
+        return dailyRewardManager;
     }
 }
