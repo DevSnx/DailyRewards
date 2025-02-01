@@ -13,6 +13,7 @@ public final class DailyRewards extends JavaPlugin {
     public void onEnable() {
         instance = this;
         dailyRewardManager = new DailyRewardManager();
+        getCommand("daily").setExecutor(new DailyRewards());
     }
 
     @Override
