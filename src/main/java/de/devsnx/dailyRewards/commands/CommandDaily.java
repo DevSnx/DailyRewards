@@ -17,11 +17,11 @@ public class CommandDaily implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
-        if(!(args.length == 0)) {
+        if(!(sender instanceof Player)) {
             return true;
         }
 
-        if(!(sender instanceof Player)) {
+        if(!(args.length == 0)) {
             return true;
         }
 
