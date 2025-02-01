@@ -1,0 +1,6 @@
+name: DailyRewards
+version: '1.0-SNAPSHOT'
+main: de.devsnx.dailyRewards.DailyRewards
+api-version: '1.20'
+authors: [ DevSnx ]
+description: Daily Reward Plugin
